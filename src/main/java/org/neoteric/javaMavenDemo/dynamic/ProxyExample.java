@@ -1,4 +1,4 @@
-package org.neoteric.javaMavenDemo;
+package org.neoteric.javaMavenDemo.dynamic;
 
 import java.lang.reflect.Proxy;
 
@@ -7,7 +7,9 @@ public class ProxyExample {
         PercentageService service = new PercentageServiceImpl();
         PercentageService proxyInstance = (PercentageService) Proxy.newProxyInstance(
                 service.getClass().getClassLoader(),
-                new Class[]{PercentageService.class},
+                new Class[]{
+                        PercentageService.class
+                },
                 new LoggingInvocationHandler(service)
         );
 

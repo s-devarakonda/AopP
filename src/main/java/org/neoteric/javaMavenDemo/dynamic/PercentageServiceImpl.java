@@ -1,6 +1,6 @@
-package org.neoteric.javaMavenDemo;
+package org.neoteric.javaMavenDemo.dynamic;
 
-public class PercentageServiceImpl implements PercentageService{
+public class PercentageServiceImpl implements PercentageService {
     @Override
     public double calculatePercentage(double obtained, double total) {
         if (total == 0) {
